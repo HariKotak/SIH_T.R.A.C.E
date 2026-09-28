@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Base ---------- */
+html, body, #root { height: 100%; }
+body {
+  @apply bg-surface text-ink-900 font-sans antialiased;
+  color-scheme: light;
+}
+/* Digits line up in tables and KPI cards */
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* ---------- Reusable component classes ---------- */
+@layer components {
+  .card      { @apply bg-white border border-surface-line rounded-md; }
+  .label     { @apply text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-400; }
+  .btn       { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-teal-600 text-white hover:bg-teal-700; }
+  .btn-navy    { @apply btn bg-navy-900 text-white hover:bg-navy-800; }
+  .btn-ghost   { @apply btn bg-white text-ink-900 border border-surface-line hover:bg-surface; }
+  .btn-danger  { @apply btn bg-crit text-white hover:brightness-95; }
+}
+
+/* ---------- Simulated CCTV feed ---------- */
+/* Faint scanlines so the placeholder reads as a camera feed, not a blank box. */
+.cctv-feed {
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at 50% 40%, #243447 0%, #101A26 75%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
