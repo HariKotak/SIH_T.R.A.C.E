@@ -1,6 +1,6 @@
 # T.R.A.C.E. — Clickable Prototype (SIH 2026)
 
-**Transparent Resource & Audit Compliance Ecosystem**
+**Transparent Resource & Audit Compliance Ecosystem**  
 Smart Real-Time Monitoring & Inspection App for the Department of Social Justice & Empowerment.
 
 > Early prototype for team feedback. Everything is mock data + React state.
@@ -26,11 +26,12 @@ npm run build    # -> dist/index.html (one self-contained file you can open or s
 8. Back to officer view: status is now **SUBMITTED**
 
 Other roles: **PMU Inspector** opens the inspector app directly; **NGO / Institute** opens the
-beneficiary app (Feedback / Report Issue / SOS, in English, हिंदी, ગુજરાતી).
+beneficiary app with **Feedback / Report Issue / SOS**, in English, हिंदी, and ગુજરાતી.
+Feedback and issue submissions now use interactive forms and generate a reference ID.
 
 ## Code map
 
-```
+```text
 src/
 ├── App.tsx                  # All navigation state (role, page, inspection status)
 ├── data/mockData.ts         # Every number/name in the demo; edit here to change the story
@@ -46,7 +47,7 @@ src/
     ├── ProjectDetails.tsx   # Screen 3: key cards + Overview/CCTV/Inspections/Evidence tabs
     ├── Inspections.tsx      # Screen 4a: random assignment (officer side)
     ├── InspectorApp.tsx     # Screen 4b: mobile inspector flow (step machine)
-    ├── BeneficiaryApp.tsx   # Screen 5: beneficiary SOS, 3 languages
+    ├── BeneficiaryApp.tsx   # Screen 5: beneficiary feedback, issue reporting, SOS, 3 languages
     └── SecondaryPages.tsx   # Live Monitoring, Projects, AI Alerts, Reports (light pages)
 ```
 
