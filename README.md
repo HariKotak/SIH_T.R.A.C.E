@@ -12,18 +12,25 @@ Smart Real-Time Monitoring & Inspection App for the Department of Social Justice
 npm install
 npm run dev      # http://localhost:5173
 npm run build    # -> dist/index.html (one self-contained file you can open or share)
+npm run preview  # Preview the build, if this script is configured
 ```
 
-## Demo flow (MONITOR → DETECT → VERIFY → INSPECT → REPORT)
+## Demo flow
 
-1. Choose **Government Officer**
-2. Dashboard → click **Attendance mismatch detected**
-3. Project Details → **CCTV** tab → click a camera (CCTV modal)
-4. **Start Surprise VC** → wait for "connected" → **End call**
-5. **Order random inspection** → **Run Random Assignment** → Priya Sharma assigned
-6. **View Inspector App** → **Start Inspection** → GPS verified → **Capture Evidence** → shutter
-7. Checklist (tap items to change status) → **Submit Inspection**
-8. Back to officer view: status is now **SUBMITTED**
+**MONITOR → DETECT → VERIFY → INSPECT → REPORT**
+
+1. Choose **Government Officer**.
+2. On the dashboard, click **Attendance mismatch detected**.
+3. Open the **CCTV** tab in Project Details and select a camera.
+4. Click **Start Surprise VC**, wait for the simulated connection, then end the call.
+5. Choose **Order random inspection**, then **Run Random Assignment**.
+6. View the assignment to **Priya Sharma**.
+7. Click **View Inspector App**, then **Start Inspection**.
+8. Wait for simulated GPS verification.
+9. Click **Capture Evidence** and use the shutter button.
+10. Tap checklist items to change their status.
+11. Click **Submit Inspection**.
+12. Return to the officer view to see the updated inspection status.
 
 Other roles: **PMU Inspector** opens the inspector app directly; **NGO / Institute** opens the
 beneficiary app (Feedback / Report Issue / SOS, in English, हिंदी, ગુજરાતી).
